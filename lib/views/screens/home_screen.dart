@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:working/controllers/contact_controller.dart';
 import 'package:working/models/contact.dart';
 import 'package:working/views/widgets/add_contact.dart';
+import 'package:working/views/widgets/custom_drawer.dart';
 import 'package:working/views/widgets/edit_contact.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -41,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("Contacts"),
         centerTitle: true,
       ),
+      drawer: CustomDrawer(),
       body: FutureBuilder(
         future: controller.getContacts(),
         builder: (context, snapshot) {
